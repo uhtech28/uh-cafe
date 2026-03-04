@@ -65,11 +65,11 @@ function initThreeScene(canvas: HTMLCanvasElement) {
       geo.attributes.position.needsUpdate = true
 
       // Animate steam
-      steamGroup.children.forEach((s, idx) => {
-        s.position.y = Math.sin(t * 0.8 + idx) * 0.08 + idx * 0.42
-        ;(s as THREE.Mesh).rotation.z = t * 0.3 + idx
-        ;((s as THREE.Mesh).material as THREE.MeshBasicMaterial).opacity = 0.04 + Math.abs(Math.sin(t + idx)) * 0.06
-      })
+      steamGroup.children.forEach((s: any, idx) => {
+  s.position.y = Math.sin(t * 0.8 + idx) * 0.08 + idx * 0.42
+  s.rotation.z = t * 0.3 + idx
+  s.material.opacity = 0.04 + Math.abs(Math.sin(t + idx)) * 0.06
+})
 
       particles.rotation.y = t * 0.05
       renderer.render(scene, camera)
