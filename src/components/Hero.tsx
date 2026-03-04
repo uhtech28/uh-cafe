@@ -1,4 +1,5 @@
 'use client'
+import type * as THREE from "three"
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
