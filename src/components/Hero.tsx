@@ -1,5 +1,4 @@
 'use client'
-import type * as THREE from "three"
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
@@ -70,7 +69,6 @@ function initThreeScene(canvas: HTMLCanvasElement) {
   s.rotation.z = t * 0.3 + idx
   s.material.opacity = 0.04 + Math.abs(Math.sin(t + idx)) * 0.06
 })
-
       particles.rotation.y = t * 0.05
       renderer.render(scene, camera)
     }
