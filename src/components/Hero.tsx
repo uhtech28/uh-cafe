@@ -64,7 +64,7 @@ function initThreeScene(canvas: HTMLCanvasElement) {
       geo.attributes.position.needsUpdate = true
 
       // Animate steam
-      steamGroup.children.forEach((s: any, idx) => {
+     steamGroup.children.forEach((s: any, idx) => {
   s.position.y = Math.sin(t * 0.8 + idx) * 0.08 + idx * 0.42
   s.rotation.z = t * 0.3 + idx
   s.material.opacity = 0.04 + Math.abs(Math.sin(t + idx)) * 0.06
